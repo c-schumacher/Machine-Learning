@@ -10,12 +10,8 @@ library(logspline)
 
 
 #reading in the data and setting it up in a data frame
-setwd('C://Users//Charlie//Desktop//Grad School Docs//Summer 2018//CSC 424//Final Project//BlogFeedback')
+setwd('PATH')
 train <- read.csv("blogData_train+names.csv", header=T)
-
-#storing the column names to back into later and changing to numbers for simplicity
-#refcolnames <- colnames(train)
-#colnames(train) <- c(1:281)
 
 ###################################
 ##### EXPLORATORY ANALYSIS ########
@@ -77,7 +73,7 @@ table(train[,281] < 10)
 summary(trainClean[,281])
 
 ################################################################
-##### Checking potential distributions this could come from ####
+##### Checking potential distributions to describe the data ####
 ################################################################
 
 #function for scaling the distribution between 0 and 1
@@ -90,7 +86,7 @@ stdscaleplus <- function(dist){
 }
 
 #distribution checks
-descdist(trainClean[,281], boot=500, discrete=F)  #this appears to almost certainly come from a beta distribution
+descdist(trainClean[,281], boot=500, discrete=F)  #this appears to possibly come from a beta distribution
 
 gammafit <- fitdist(stdscaleplus(trainClean[,281]), "gamma")
 gammafit
