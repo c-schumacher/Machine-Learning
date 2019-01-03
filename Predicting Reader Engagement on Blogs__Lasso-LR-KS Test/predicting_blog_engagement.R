@@ -8,7 +8,6 @@ library(vioplot)
 library(fitdistrplus)
 library(logspline)
 
-
 #reading in the data and setting it up in a data frame
 setwd('PATH')
 train <- read.csv("blogData_train+names.csv", header=T)
