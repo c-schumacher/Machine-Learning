@@ -72,7 +72,6 @@ summary(fit)
 vif(fit)
 corrplot(cor(df2[ ,c(1,4,8,18)]), method='ellipse')
 
-
 plot(df2$price, resid(fit), ylab="Residuals", xlab="Price", main='House Prices')
 abline(0,0)
 plot(fit)
