@@ -53,9 +53,9 @@ ccSurvey$cor
 wilksSurvey = ccaWilks(attitudinal, health, ccSurvey)
 round(wilksSurvey, 2)
 
-#Attitudinal raw coefficients (like loadings in PCA)
+#Attitudinal raw coefficients 
 round(ccSurvey$xcoef, 2)
-#Health Correlations raw coefficients (like loadings in PCA)
+#Health Correlations raw coefficients
 round(ccSurvey$ycoef, 2)
 
 ### Calculating the correlations btween each of the canonical variates and the original variables
